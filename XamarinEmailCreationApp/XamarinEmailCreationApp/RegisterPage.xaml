@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinEmailCreationApp.RegisterPage"
+             Title="Register"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+            <Image Source="INTECLogo.png" WidthRequest="150" HeightRequest="150"></Image>
+            <Entry Placeholder="Name" Margin="20, 0, 20, 0" x:Name="nameEntry"/>
+            <Entry Placeholder="Email" Margin="20, 0, 20, 0" x:Name="emailEntry" />
+            <Entry Placeholder="Password" IsPassword="True" Margin="20, 0, 20, 0" x:Name="passwordEntry"/>
+            <Entry Placeholder="ConfirmPassword" IsPassword="True" Margin="20, 0, 20, 0" x:Name="confirmPasswordEntry"/>
+            <Button Text="Register" BackgroundColor="Red" Margin="20, 0, 20, 0" Clicked="RegisterButtonClicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
