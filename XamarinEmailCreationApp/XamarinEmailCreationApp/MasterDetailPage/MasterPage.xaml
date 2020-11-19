@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinEmailCreationApp.MasterPage"
+             Title="Master">
+    <StackLayout VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="20, 0, 20, 0">
+        <Button Text="Home" BackgroundColor="Red" TextColor="White" Clicked="HomeButtonClicked" />
+        <Button Text="Option1" BackgroundColor="Red" TextColor="White" Clicked="Option1ButtonClicked" />
+        <Button Text="LoginPage" BackgroundColor="Red" TextColor="White" Clicked="LoginPageButtonClicked" />
+    </StackLayout>
+</ContentPage>

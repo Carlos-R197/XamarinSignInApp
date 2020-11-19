@@ -12,9 +12,12 @@ namespace XamarinEmailCreationApp
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class RegisterPage : ContentPage
     {
-        public RegisterPage()
+        IEnumerable<User> existingUsers;
+
+        public RegisterPage(IEnumerable<User> existingUsers)
         {
             InitializeComponent();
+            this.existingUsers = existingUsers;
         }
 
         async private void RegisterButtonClicked(object sender, EventArgs e)
@@ -25,8 +28,13 @@ namespace XamarinEmailCreationApp
                 await DisplayAlert("Error", "Your passwords aren't the same", "OK");
             else
             {
-                LoginPage.AddUser(new User(nameEntry.Text, emailEntry.Text, passwordEntry.Text));
-                await DisplayAlert("Important", "Your account has been created", "OK");
+                if (existingUsers.Any(t => t.Email == emailEntry.Text))
+                    await DisplayAlert("Error", "That email is alredy in use", "OK");
+                else
+                {
+                    LoginPage.AddUser(new User(nameEntry.Text, emailEntry.Text, passwordEntry.Text));
+                    await DisplayAlert("Important", "Your account has been created", "OK");
+                }
             }
         }
 

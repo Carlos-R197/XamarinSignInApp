@@ -27,7 +27,9 @@ namespace XamarinEmailCreationApp
             if (user != null)
             {
                 await DisplayAlert("Welcome", $"Hello {user.Name} ", "OK");
-                //Move to the next page
+                emailEntry.Text = "";
+                passwordEntry.Text = "";
+                await Navigation.PushAsync(new LoggedPage());
             }
             else
             {
@@ -40,7 +42,7 @@ namespace XamarinEmailCreationApp
 
         async private void RegisterButtonClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new RegisterPage());
+            await Navigation.PushAsync(new RegisterPage(existingUsers));
         }
     }
 }

@@ -85,7 +85,9 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\accesibility.png" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\XamarinEmailCreationApp\XamarinEmailCreationApp.csproj">
       <Project>{62E67628-AC7A-423D-87E6-CD8C0E0F8053}</Project>
@@ -95,5 +97,13 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\INTECLogo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\home.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties TriggeredFromHotReload="False" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>
